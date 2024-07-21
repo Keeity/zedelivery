@@ -3,15 +3,16 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import SigninPage from '../pages/Signin';
 import SignupPage from '../pages/Signup';
 import HomePage from '../pages/Home';
+import ProductsPage from '../pages/Products';
 
 function RoutesComponent() {
 
     // const { isAuthenticated } = useAuth()
-    const isAuthenticated = false
+    const isAuthenticated = true    //muda para true ou false para teste. Fazer o mesmo no app.jsx
 
            function loginRedirect(component) {
         if (isAuthenticated) {
-            return <Navigate to='/home' replace />
+            // return <Navigate to='/home' replace />
         }
          return component
     }
@@ -21,13 +22,12 @@ function RoutesComponent() {
         <Routes>
             <Route path='/login' element={loginRedirect(<SigninPage/>)} />
             <Route path='/cadastro' element={loginRedirect(<SignupPage/>)} />
-
+            <Route path='/' Component={HomePage} />
+            <Route path='/home' Component={HomePage} />
+            <Route path='/produtos' Component={ProductsPage} />
             {isAuthenticated ? (
                 <>
-                    <Route path='/' Component={HomePage} />
-                    <Route path='/home' Component={HomePage} />
-            <Route path='/login' element={loginRedirect(<SigninPage/>)} />
-            <Route path='/cadastro' element={loginRedirect(<SignupPage/>)} />
+
                 </>
             ) : (
                 <Route path='*' element={<Navigate replace to='/login' />} />

@@ -1,4 +1,4 @@
-function MenuComponent() {
+function Menu() {
 
     return (
         <>
@@ -6,4 +6,4 @@ function MenuComponent() {
     )
 }
 
-export default MenuComponent
+export default Menu

@@ -1,0 +1,15 @@
+.header{
+    list-style-type: none;
+background-color: black;
+color: white;
+ 
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}

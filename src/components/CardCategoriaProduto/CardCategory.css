@@ -1,0 +1,30 @@
+.card-categoria {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;    
+    align-items: center;
+}
+.card-categoria__bg {
+    width: 155px;
+    height: 75px;
+    background-color: rgb(243, 246, 243);
+    border-radius: 12px;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* "card-categoria">
+                <div className="card-categoria__bg">
+                    <img src={imagem}/>
+                </div>                
+                <span>{texto}</span>
+            </div>
+        </> */

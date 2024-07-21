@@ -1,0 +1,24 @@
+.formSignup{
+    padding: 40px
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 36px;
+    padding-right: 36px;
+    row-gap: 20px;
+
+}
+
+.form-control {
+    min-width: 290px;
+    width: fit-content;
+}
+.label{
+padding: 30px;
+align-content:flex-start
+}

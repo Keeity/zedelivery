@@ -1,6 +1,6 @@
 import './Footer.css'
 
-function FooterComponent () {
+function Footer () {
 return (
 <>
 <div className= "footer">
@@ -15,4 +15,4 @@ return (
 )
 }
 
-export default FooterComponent
+export default Footer

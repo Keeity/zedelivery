@@ -1,5 +1,5 @@
 import './CardCategory.css'
-function CardCategoryComponent({ texto, imagem }) {
+function CardCategory({ texto, imagem }) {
     return (
         <>
             <div className="card-categoria">
@@ -12,4 +12,4 @@ function CardCategoryComponent({ texto, imagem }) {
     )
 }
 
-export default CardCategoryComponent
+export default CardCategory

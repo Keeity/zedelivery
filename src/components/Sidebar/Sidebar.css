@@ -2,3 +2,7 @@ nav {
 display: flex;
 flex-direction: column
 }
+
+.sidebar{
+    background-color: aquamarine;;
+    }

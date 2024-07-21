@@ -1,44 +1,18 @@
-import { useNavigate } from "react-router-dom"
-import { useState } from "react"
-// import { useAuth } from '../context/AuthContext.jsx'
-// import { apiLogin } from "../services/api.js"
+import { Link } from "react-router-dom"
+import FormSignin from "../components/FormSignin/FormSignin"
+import './Pages.css'
 
 function SigninPage() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    
-    const navigate = useNavigate()
-    
-    // const { login } = useAuth()
-
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-
-        try {
-            // const response = await apiLogin(username, password)
-            // if (response.success) {
-            //     login(response)
-            if (email === 'admin@admin.com' && password === 'admin123') {
-              // redireciona para algum lugar
-                  navigate('/home')
-            } else {
-                alert('Usuário ou senha incorretos')
-            }
-
-        } catch (error) {
-            console.log(error)
-        }
-    }
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Email" type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button type="submit">Login</button>
-            </form>
-        </div>
+    <div className='signup'>
+       <h1>Login</h1>
+      <FormSignin> </FormSignin>
+      <nav>
+              <p>Você ainda não está cadastrado?</p>
+              <Link  to= '/cadastro'>Cadastre-se</Link>
+          </nav>
+    </div>
     )
 }
 

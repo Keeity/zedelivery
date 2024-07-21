@@ -22,28 +22,48 @@ html, body {
 .grid-container {
   display: grid;
   grid-template-areas: 
-                        'sidebar header header'
-                        'sidebar content content'
-                        'sidebar content content';
+                        'header header header'
+                        'hero hero hero'
+                        'content content content'
+                        'footer footer footer';
   grid-template-columns: 240px 1fr 1fr;
-  grid-template-rows: 70px 1fr 1fr;  
+  grid-template-rows: 70px 1fr 1fr 50px;  
   height: 100vh;
 }
 
-.header {  
-  grid-area: header;  
+.footer {  
+  grid-area: footer;  
   display: flex;
-  align-items: center;
-  justify-content: end;
+  align-items:last baseline;
+  justify-content: center;
   padding-left: 36px;
   padding-right: 36px;
 }
+.header {  
+  grid-area: header;  
+  /* display: flex;
+  align-items:last baseline;
+  justify-content: end;
+  padding-left: 36px;
+  padding-right: 36px; */
+  list-style-type: none;
+  background-color: black;
+  color: white;
+  grid-area: header;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-left: 176px;
+  padding-right: 176px;
+  flex-direction: row;
+}
 
-.sidebar {  
-  grid-area: sidebar;  
+.hero {  
+  grid-area: hero;  
   display: flex;
   align-items: center;
   padding: 14px 30px;  
+  height: 464px;
 }
 
 .sidebar nav {

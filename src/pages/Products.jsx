@@ -7,7 +7,7 @@ import CardCategory from "../components/CardCategoriaProduto/CardCategoriaProdut
 function ProductsPage() {
     return (
         <div className="content">
-        <h1>Products</h1>
+        <h1>Produtos</h1>
         <CardCategory></CardCategory>
 
         </div>

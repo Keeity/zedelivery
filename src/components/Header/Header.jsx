@@ -1,11 +1,14 @@
 // import ProfileElement from "./Profile/Profile"
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
 
 function Header() {
+
+  const navigate = useNavigate(); // Obtenha a função de navegação
+
   function handleLogin() {
-   return <Navigate to="/login" replace />;
+    navigate("/login"); // Redirecione para a rota /login
   }
 
   return (
@@ -18,12 +21,7 @@ function Header() {
         ></img>
       </div>
       <button type="button" onClick={handleLogin} className= "btnEnter">Entrar</button>
-      {/* <ul>
-        <li> 1</li>
-        <li> 2</li>
-        <li> 3</li>
-      </ul> */}
-    </div>
+         </div>
   );
 }
 export default Header;

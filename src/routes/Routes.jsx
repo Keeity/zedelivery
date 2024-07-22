@@ -25,13 +25,12 @@ function RoutesComponent() {
             <Route path='/' Component={HomePage} />
             <Route path='/home' Component={HomePage} />
             <Route path='/produtos' Component={ProductsPage} />
-            {isAuthenticated ? (
-                <>
-
-                </>
+            <Route path='*' element={<Navigate replace to='/home' />} />
+            {/* {isAuthenticated ? (
+              
             ) : (
-                <Route path='*' element={<Navigate replace to='/login' />} />
-            )}
+           
+            )} */}
 
             {/* /nao-existente */}
             {/* <Route path='*' Component={App} /> */}

@@ -5,7 +5,7 @@ import './Pages.css'
 function SigninPage() {
 
     return (
-    <div className='signup'>
+    <div className='signin'>
        <h1>Login</h1>
       <FormSignin> </FormSignin>
       <nav>
